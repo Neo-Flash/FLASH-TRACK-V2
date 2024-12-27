@@ -1,0 +1,66 @@
+{
+    "global_fragments": [
+        {
+            "first_frame_of_the_core": 1,
+            "fragments_identifiers": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+            "minimum_distance_travelled": 69.45282440077726
+        },
+        {
+            "first_frame_of_the_core": 32,
+            "fragments_identifiers": [0, 1, 2, 3, 4, 9, 6, 7, 8],
+            "minimum_distance_travelled": 69.45282440077726
+        },
+        {
+            "first_frame_of_the_core": 44,
+            "fragments_identifiers": [0, 1, 2, 3, 4, 9, 6, 7, 8],
+            "minimum_distance_travelled": 69.45282440077726
+        },
+        {
+            "first_frame_of_the_core": 46,
+            "fragments_identifiers": [0, 1, 2, 3, 4, 9, 6, 7, 8],
+            "minimum_distance_travelled": 69.45282440077726
+        },
+        {
+            "first_frame_of_the_core": 104,
+            "fragments_identifiers": [1, 0, 2, 3, 9, 16, 7, 8, 6],
+            "minimum_distance_travelled": 69.45282440077726
+        },
+        {
+            "first_frame_of_the_core": 127,
+            "fragments_identifiers": [1, 2, 0, 9, 3, 16, 17, 8, 6],
+            "minimum_distance_travelled": 322.9466171228977
+        },
+        {
+            "first_frame_of_the_core": 246,
+            "fragments_identifiers": [1, 2, 0, 9, 3, 16, 17, 8, 6],
+            "minimum_distance_travelled": 322.9466171228977
+        },
+        {
+            "first_frame_of_the_core": 248,
+            "fragments_identifiers": [1, 2, 0, 9, 3, 16, 17, 8, 6],
+            "minimum_distance_travelled": 322.9466171228977
+        },
+        {
+            "first_frame_of_the_core": 254,
+            "fragments_identifiers": [21, 2, 0, 9, 3, 16, 17, 8, 6],
+            "minimum_distance_travelled": 249.11688017995965
+        },
+        {
+            "first_frame_of_the_core": 267,
+            "fragments_identifiers": [21, 2, 0, 9, 3, 16, 17, 25, 8],
+            "minimum_distance_travelled": 249.11688017995965
+        }
+    ],
+    "non_accumulable_global_fragments": [
+        {
+            "first_frame_of_the_core": 101,
+            "fragments_identifiers": [1, 0, 2, 3, 9, 13, 7, 8, 6],
+            "minimum_distance_travelled": 0
+        },
+        {
+            "first_frame_of_the_core": 263,
+            "fragments_identifiers": [21, 2, 0, 9, 3, 16, 17, 22, 8],
+            "minimum_distance_travelled": 6.095518288198197
+        }
+    ]
+}

@@ -1,0 +1,143 @@
+00:18:39 Welcome to idtracker.ai                                                                            init_logger.py:102
+         Running idtracker.ai '5.2.12' on Python '3.11.0'                                                   init_logger.py:103
+         Platform: 'macOS-14.0-arm64-arm-64bit'                                                                               
+         Date: 2024-12-09 00:18:39                                                                                            
+         Writing log in /Users/flash/Desktop/其他/Flash-Track-V2/idtrackerai.log                            init_logger.py:108
+         Using NumPy 1.26.4                                                                                 init_logger.py:109
+         No parameter files detected                                                                            __main__.py:50
+         No terminal arguments detected                                                                         __main__.py:58
+         Initializing SegmentationGUI with PyQt5 5.15.11                                                   GUI_main_base.py:39
+00:18:48 Generating frame stack for background subtraction with 50 samples                                 segmentation.py:251
+00:18:49 Computing background (50 iterations). It took 0:00:00                                             segmentation.py:279
+         Computing background from a frame stack using 'median'                                            segmentation.py:313
+00:19:09 GUI params:                                                                                               main.py:290
+                         video_paths=['/Users/flash/Desktop/其他/Flash-Track-V2/FISH.mp4']                                    
+                       intensity_ths=[35, 255]                                                                                
+                            area_ths=[50.0, inf]                                                                              
+                  tracking_intervals=None                                                                                     
+                   number_of_animals=9                                                                                        
+                             use_bkg=True                                                                                     
+                  check_segmentation=False                                                                                    
+                resolution_reduction=1.0                                                                                      
+                 track_wo_identities=True                                                                                     
+                            roi_list=None                                                                                     
+         background_subtraction_stat='median'                                                                                 
+00:19:11 Using PyTorch 2.4.0                                                                                       utils.py:18
+         Using MacOS Metal backend                                                                                 utils.py:34
+00:19:13 START Tracking session                                                                                      run.py:26
+         Initializing Session                                                                                   session.py:146
+         Setting video paths to:                                                                                session.py:155
+             /Users/flash/Desktop/其他/Flash-Track-V2/FISH.mp4                                                                
+         The session has 500 frames (1 episodes)                                                                session.py:195
+                 Episode 0, frames (0 => 500) of /FISH.mp4                                                      session.py:202
+         No session name provided, assigning name "FISH"                                                        session.py:214
+         Directory /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH has been created                       session.py:234
+         Directory /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/preprocessing has been created         session.py:235
+         Number of parallel jobs: 4                                                                             session.py:256
+         Background saved at /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/preprocessing/background.png session.py:312
+         Saving Session object in /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/session.json                run.py:111
+         START Animal detection                                                                                py_utils.py:218
+         Directory /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/bounding_box_images has been  animals_detection.py:19
+         created                                                                                                              
+         Using previously computed background model from GUI                                           animals_detection.py:31
+         Segmenting video, 1 episodes in 4 parallel jobs                                                   segmentation.py:207
+         Saving bounding box images in                                                                     segmentation.py:210
+         /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/bounding_box_images                                            
+00:19:14 Segmenting video (1 iterations). It took 0:00:01                                                  segmentation.py:231
+         Generating ListOfBlobs object                                                                     list_of_blobs.py:26
+         4509 detected blobs in total                                                                  animals_detection.py:64
+         WARNING There are 8 frames with more blobs than animals                                      animals_detection.py:100
+         WARNING This can be detrimental for the proper functioning of the system                     animals_detection.py:112
+         WARNING Frames with more blobs than animals: [42, 99, 100, 102, 103, 245, 247, 253]          animals_detection.py:114
+         Saving indices of frames with more blobs than animals in                                     animals_detection.py:121
+         /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/inconsistent_frames.csv                                        
+         Check_segmentation is False, ignoring the above errors                                       animals_detection.py:132
+         FINISH Animal detection, it took 0:00:01                                                              py_utils.py:223
+         Saving Session object in /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/session.json                run.py:111
+         Saving ListOfBlobs at                                                                                      run.py:113
+         /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/preprocessing/list_of_blobs.pickle                             
+         START Crossing detection                                                                              py_utils.py:218
+         Computing body lengths (500 iterations). It took 0:00:00                                             model_area.py:82
+         Median body length: 39.0 pixels                                                                      model_area.py:95
+         Identification image size set to [28, 28, 1]                                                           session.py:289
+         Directory /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/identification_images has been created __init__.py:27
+00:19:16 Setting images for identification (1 iterations). It took 0:00:01                                list_of_blobs.py:216
+         Connecting blobs (500 iterations). It took 0:00:00                                                list_of_blobs.py:68
+         Classifying Blobs as individuals or crossings depending on their area and the number of blobs crossing_detector.py:27
+         in the frame                                                                                                         
+         Initializing ModelArea for individual/crossing blob initial classification                           model_area.py:40
+         Model area computed with 4428 blobs. Mean area = 134.8, median = 123.0, and std = 48.4 (in pixels)   model_area.py:66
+         Get list of blobs for training, validation and eval                                           crossings_dataset.py:19
+         First individual/crossing assignment (500 iterations). It took 0:00:00                        crossings_dataset.py:23
+         4428 sure individuals and 0 sure crossings                                                    crossings_dataset.py:47
+         2700 individual and 0 crossing blobs for training                                             crossings_dataset.py:87
+         300 individual and 0 crossing blobs for validation                                                                   
+         81 unknown blobs                                                                              crossing_detector.py:57
+         There are not enough crossings to train the crossing detector                                 crossing_detector.py:63
+         FINISH Crossing detection, it took 0:00:01                                                            py_utils.py:223
+         Saving Session object in /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/session.json                run.py:111
+         Saving ListOfBlobs at                                                                                      run.py:113
+         /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/preprocessing/list_of_blobs.pickle                             
+         START Fragmentation                                                                                   py_utils.py:218
+         Fragmenting blobs (500 iterations). It took 0:00:00                                               fragmentation.py:58
+         Creating list of fragments                                                                   list_of_fragments.py:591
+         Connecting coexisting fragments (26 iterations). It took 0:00:00                             list_of_fragments.py:348
+         26 Fragments in total, 26 individuals and 0 crossings                                             fragmentation.py:29
+         Total number of Global Fragments: 10                                                   list_of_global_fragments.py:47
+         Of which 8 are long enough to be accumulated                                           list_of_global_fragments.py:51
+         FINISH Fragmentation, it took 0:00:00                                                                 py_utils.py:223
+         Saving Session object in /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/session.json                run.py:111
+         Saving ListOfBlobs at                                                                                      run.py:113
+         /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/preprocessing/list_of_blobs.pickle                             
+         Saving ListOfFragments as                                                                                  run.py:115
+         /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/preprocessing/list_of_fragments.json                           
+         Saving ListOfGlobalFragments at                                                                            run.py:117
+         /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/preprocessing/list_of_global_fragments.json                    
+         START Tracking                                                                                        py_utils.py:218
+         Tracking without identities                                                                            __init__.py:86
+         Assigning random identities (500 iterations). It took 0:00:00                                          __init__.py:91
+         FINISH Tracking, it took 0:00:00                                                                      py_utils.py:223
+         Saving Session object in /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/session.json                run.py:111
+         Saving ListOfBlobs at                                                                                      run.py:113
+         /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/preprocessing/list_of_blobs.pickle                             
+         Saving ListOfFragments as                                                                                  run.py:115
+         /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/preprocessing/list_of_fragments.json                           
+         Saving ListOfGlobalFragments at                                                                            run.py:117
+         /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/preprocessing/list_of_global_fragments.json                    
+         START Trajectories creation                                                                           py_utils.py:218
+         Directory /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/trajectories has been     trajectories_creation.py:32
+         created                                                                                                              
+         Producing trajectories (500 iterations). It took 0:00:00                                       get_trajectories.py:38
+         WARNING                                                                                               warnings.py:109
+         /Users/flash/.local/lib/python3.11/site-packages/idtrackerai/base/postprocess/get_trajectories.py:69:                
+         RuntimeWarning: Mean of empty slice                                                                                  
+           "mean": np.nanmean(areas, axis=0),                                                                                 
+                                                                                                                              
+         WARNING                                                                                               warnings.py:109
+         /Users/flash/.local/lib/python3.11/site-packages/idtrackerai/base/postprocess/get_trajectories.py:70:                
+         RuntimeWarning: All-NaN slice encountered                                                                            
+           "median": np.nanmedian(areas, axis=0),                                                                             
+                                                                                                                              
+         WARNING                                                                                               warnings.py:109
+         /Users/flash/opt/anaconda3/envs/cv2/lib/python3.11/site-packages/numpy/lib/nanfunctions.py:1879:                     
+         RuntimeWarning: Degrees of freedom <= 0 for slice.                                                                   
+           var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,                                                        
+                                                                                                                              
+         Saving trajectories with gaps in                                                          trajectories_creation.py:39
+         /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/trajectories/with_gaps.npy                                     
+         Directory /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/trajectories/with_gaps_csv  trajectories_to_csv.py:45
+         has been created                                                                                                     
+         Converting /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/trajectories/with_gaps.npy trajectories_to_csv.py:47
+         to .csv and .json                                                                                                    
+         Saving ListOfBlobs at                                                                     trajectories_creation.py:53
+         /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/preprocessing/list_of_blobs.pickle                             
+         FINISH Trajectories creation, it took 0:00:00                                                         py_utils.py:223
+         FINISH Tracking session, it took 0:00:03                                                                    run.py:67
+         Saving Session object in /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/session.json                 run.py:68
+         Tracked without identities, no estimated accuracy available.                                                run.py:71
+         Data policy: "idmatcher.ai"                                                                            session.py:850
+         Directory /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/bounding_box_images has been removed   session.py:875
+         Directory /Users/flash/Desktop/其他/Flash-Track-V2/session_FISH/crossings_detector not found, can't    session.py:876
+         remove                                                                                                               
+         Compressing identification images (1 iterations). It took 0:00:00                                      session.py:885
+         Success                                                                                                     run.py:81

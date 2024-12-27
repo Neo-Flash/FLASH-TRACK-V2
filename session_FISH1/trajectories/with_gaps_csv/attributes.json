@@ -1,0 +1,27 @@
+{
+    "version": "5.2.12",
+    "video_paths": [
+        "/Users/flash/Desktop/\u5176\u4ed6/Flash-Track-V2/FISH.mp4"
+    ],
+    "frames_per_second": 25,
+    "body_length": 39.0,
+    "stats": {
+        "estimated_accuracy": null
+    },
+    "setup_points": {},
+    "identities_labels": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+    ],
+    "identities_groups": {},
+    "length_unit": null
+}

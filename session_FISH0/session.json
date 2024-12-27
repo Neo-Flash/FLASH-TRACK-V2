@@ -1,0 +1,93 @@
+{
+    "number_of_error_frames": 3,
+    "estimated_accuracy": 1.0,
+    "accumulation_trial": 0,
+    "identities_labels": null,
+    "video_paths": [
+        "/Users/flash/Desktop/\u5176\u4ed6/Flash-Track-V2/FISH.mp4"
+    ],
+    "number_of_animals": 10,
+    "intensity_ths": [
+        35,
+        255
+    ],
+    "area_ths": [
+        58.0,
+        Infinity
+    ],
+    "name": "FISH",
+    "tracking_intervals": [
+        [
+            0,
+            500
+        ]
+    ],
+    "resolution_reduction": 1.0,
+    "roi_list": null,
+    "use_bkg": true,
+    "knowledge_transfer_folder": null,
+    "check_segmentation": false,
+    "identity_transfer": false,
+    "track_wo_identities": true,
+    "frames_per_episode": 500,
+    "background_subtraction_stat": "median",
+    "number_of_frames_for_background": 50,
+    "number_of_parallel_workers": 4,
+    "data_policy": "idmatcher.ai",
+    "id_image_size": [
+        28,
+        28,
+        1
+    ],
+    "protocol3_action": "ask",
+    "convert_trajectories_to_csv_and_json": true,
+    "add_time_column_to_csv": false,
+    "exclusive_rois": false,
+    "identity_transfer_succeded": false,
+    "bounding_box_images_in_ram": false,
+    "version": "5.2.12",
+    "accumulation_statistics_data": [
+        {}
+    ],
+    "original_width": 712,
+    "original_height": 720,
+    "frames_per_second": 25,
+    "number_of_frames": 500,
+    "session_folder": "/Users/flash/Desktop/\u5176\u4ed6/Flash-Track-V2/session_FISH",
+    "first_frame_first_global_fragment": [],
+    "identities_groups": {},
+    "setup_points": {},
+    "timers": {
+        "Tracking session": {
+            "name": "Tracking session",
+            "start_time": "2024-12-09T00:16:37.338861",
+            "finish_time": "2024-12-09T00:16:41.006577"
+        },
+        "Animal detection": {
+            "name": "Animal detection",
+            "start_time": "2024-12-09T00:16:37.365714",
+            "finish_time": "2024-12-09T00:16:39.204464"
+        },
+        "Crossing detection": {
+            "name": "Crossing detection",
+            "start_time": "2024-12-09T00:16:39.220327",
+            "finish_time": "2024-12-09T00:16:40.803342"
+        },
+        "Fragmentation": {
+            "name": "Fragmentation",
+            "start_time": "2024-12-09T00:16:40.823544",
+            "finish_time": "2024-12-09T00:16:40.849853"
+        },
+        "Tracking": {
+            "name": "Tracking",
+            "start_time": "2024-12-09T00:16:40.877462",
+            "finish_time": "2024-12-09T00:16:40.882166"
+        },
+        "Trajectories creation": {
+            "name": "Trajectories creation",
+            "start_time": "2024-12-09T00:16:40.908253",
+            "finish_time": "2024-12-09T00:16:41.005608"
+        }
+    },
+    "median_body_length": 39.0
+}
